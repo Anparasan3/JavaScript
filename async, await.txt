@@ -1,0 +1,23 @@
+console.log("person1");
+console.log("person2");
+//const preMovie = async () => "preMovie";
+//preMovie().then((m) => console.log(m));
+const preMovie= async () => {
+	const wife = new Promise((res, rej) => {
+	setTimeout(() => res("ticket"),5000)
+})
+const popCorn = new Promise ((res, rej) =>{
+	setTimeout(() => res("popcorn"),5000)
+})
+console.log(await wife)
+let ticket = await wife;
+console.log(ticket);
+console.log("i have the ticket");
+console.log("we should go in");
+let pop = await popCorn;
+console.log("popcorn got",pop);
+return "ticket";
+}
+preMovie().then((m) => console.log(m));
+console.log("person4");
+console.log("person5")

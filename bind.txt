@@ -1,0 +1,7 @@
+function add(a,b){
+    console.log(this.nam);
+    return a + b;
+};
+
+var o = {nam: 'sanosh'};
+var bindedfn = add.bind(o, 3);

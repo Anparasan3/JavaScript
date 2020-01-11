@@ -1,0 +1,13 @@
+var obj = {
+    demo: 'santosh',
+
+    sayMyName: function(){
+        console.log(this);
+        console.log(this.demo);
+        setTimeout(() => {
+            console.log(this.demo);
+        },2000);
+    }
+};
+
+obj.sayMyName();

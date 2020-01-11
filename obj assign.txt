@@ -1,0 +1,15 @@
+const mapper = new Map([['1', 'a'], ['2', 'b']]);
+Array.from(mapper.values());
+// ['a', 'b'];
+
+
+Array.from(mapper.keys());
+// ['1', '2'];
+console.log(mapper.values())
+console.log(mapper.keys())
+console.log(mapper);
+//Map(2) {"1" => "a", "2" => "b"}
+	//size: (...)__proto__: 
+	//Map[[Entries]]: Array(2)
+	//0: {"1" => "a"}
+	//1: {"2" => "b"}length: 2

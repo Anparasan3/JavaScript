@@ -1,0 +1,42 @@
+/* var a = 0;
+call = () => {
+  a =9;
+  console.log("this",this);
+}
+call(); */
+//var a;
+var bb = 10;
+var a =9;
+const call = {
+	b: a,
+  f:function() {
+  console.log(this.b);//9 
+  //console.log(b);//Uncaught ReferenceError: b is not defined
+  console.log("a",a);//9
+  console.log("this.a",this.a);//undefind
+  console.log("bb",bb);//10 if var bb = 10 ; undefind
+  console.log("this.bb",this.bb);//undefind
+  },
+  farr:()=> {
+  console.log("arrow");
+  console.log(this.b);//undefind
+  console.log("call.b",call.b);//9
+  //console.log(b);//Uncaught ReferenceError: b is not defined
+  console.log("a",a);//9
+  console.log("this.a",this.a);//undefind
+  console.log("bb",bb);//10 if 
+  console.log("this.bb",this.bb);//10 var bb = 10 ; undefind
+  }
+  
+}
+call.f();
+call.farr();
+/* function add(a){
+var a=0;
+    console.log("kkkkk",this);
+    return a ;
+};
+
+var o = {nam: 'sanosh'};
+var bindedfn = add.bind(this, 3);
+bindedfn(); */

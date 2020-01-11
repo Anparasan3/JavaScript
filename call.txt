@@ -1,0 +1,5 @@
+var obj = {num:2}
+var fun = function(a) {
+	return a+this.num;	
+}
+console.log(fun.call(obj,5));

@@ -1,0 +1,22 @@
+/* let f = () => {
+  let i = 0;
+  let j = 6;
+  return () => {
+    console.log(i);
+    console.log(j);
+  };
+};
+console.dir(f()); */
+for ( var i = 0;i < 3;i++) {
+	setTimeout(() => {
+  	console.log("var",i);
+  }, 1000)
+}
+console.log("santhosh var");
+
+for ( let i = 0;i < 3;i++) {
+	setTimeout(() => {
+  	console.log("let",i);
+  }, 1000)
+}
+console.log("santhosh");

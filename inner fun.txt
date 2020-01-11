@@ -1,0 +1,12 @@
+function add(){
+   // console.log(o);
+    //return a + b;
+    function m() {
+    console.log(myval);
+    }
+    var myval = 8;
+    m();
+}
+var myval = 6;
+add();
+m();//Uncaught ReferenceError: m is not defined

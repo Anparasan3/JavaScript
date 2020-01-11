@@ -1,0 +1,9 @@
+var obj = {
+	a:"santhosh"
+}
+function call() {
+	console.log("a",this);
+}
+obj.call = call
+obj.call()
+//a {a: "santhosh", call: ƒ}

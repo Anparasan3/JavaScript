@@ -1,0 +1,24 @@
+var myArray = [{name:'vignesh',age: 29},{name: 'santosh', age: 32}, {name:'sherif', age:22}];
+var temp = {};
+myArray.forEach((valueI, i)=> {
+    myArray.slice(i+1, myArray.length).forEach((valueJ, j)=> {
+        //console.log("i",i, "j",j);
+        //console.log(valueI,valueJ)
+        if(valueI.age > valueJ.age) {
+         
+          console.log("b4",myArray)
+          myArray.splice(i,0,valueJ);
+          console.log("aft",myArray)
+          myArray.splice(i+1,1);
+          //valueJ = temp;
+          myArray.splice(j,0,valueI);
+          myArray.splice(j+1,1);
+        }
+    })
+
+});
+
+myArray.sort(function(obj1, obj2) {
+    return obj1.age - obj2.age;
+});
+console.log(myArray)
