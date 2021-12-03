@@ -6,7 +6,19 @@ function multiply2() {
 }
 
 const genFunction = multiply2();
-
 const result = genFunction(90);
-
 console.log(result);
+
+
+function multiply2() {
+let counter = 0
+	function closureFun(){
+  	return ++counter;
+  }
+  return closureFun;
+}
+
+const genFunction = multiply2();
+console.log(genFunction());
+console.log(genFunction());
+console.log(genFunction());
