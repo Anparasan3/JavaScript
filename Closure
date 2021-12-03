@@ -19,6 +19,12 @@ let counter = 0
 }
 
 const genFunction = multiply2();
-console.log(genFunction());
-console.log(genFunction());
-console.log(genFunction());
+console.log(genFunction()); //1
+console.log(genFunction()); //2
+console.log(genFunction()); //3
+ 
+const cpy = genFunction;
+console.log(cpy()); // 4
+ 
+const cpygenFunction = multiply2();
+console.log(cpygenFunction()) // 1
