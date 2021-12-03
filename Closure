@@ -28,3 +28,28 @@ console.log(cpy()); // 4
  
 const cpygenFunction = multiply2();
 console.log(cpygenFunction()) // 1
+
+
+//closure with object
+
+function multiply2() {
+let counter = {a: 5, b: 6};
+	function closureFun(){
+  	counter.a = ++counter.a;
+    counter.b = --counter.b;
+    return counter;
+  }
+  return closureFun;
+}
+
+const genFunction = multiply2();
+console.log(genFunction()); //{a: 6, b: 5}
+console.log(genFunction()); //{a: 7, b: 4}
+console.log(genFunction()); //{a: 8, b: 3}
+ 
+const cpy = genFunction;
+console.log(cpy()); // {a: 9, b: 2}
+ 
+const cpygenFunction = multiply2();
+console.log(cpygenFunction()) // {a: 6, b: 5}
+ 
