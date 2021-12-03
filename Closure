@@ -1,0 +1,12 @@
+function multiply2() {
+	function closureFun(num){
+  	return num * 2;
+  }
+  return closureFun;
+}
+
+const genFunction = multiply2();
+
+const result = genFunction(90);
+
+console.log(result);
