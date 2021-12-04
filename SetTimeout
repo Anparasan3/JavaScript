@@ -1,0 +1,76 @@
+//example 1
+/* function fun1() {
+  console.log('fun1');
+}
+
+setTimeout(()=> fun1(), 1000);
+
+console.log('global') */
+
+//output
+	//global
+	//fun1
+  
+  
+//example 2
+/* function fun1() {
+  console.log('fun1');
+}
+
+function fun2() {
+  console.log('fun2')
+}
+
+setTimeout(()=> fun1(), 1000);
+fun2();
+
+console.log('global') */
+
+//output
+	//fun2
+	//global
+	//fun1
+  
+  
+  
+//example3
+
+/* function fun1() {
+  console.log('fun1');
+}
+
+function fun2() {
+  console.log('fun2')
+}
+
+setTimeout(()=> fun1(), 0);
+fun2();
+
+console.log('global') */
+
+//output
+	//fun2
+	//global
+	//fun1
+  
+  
+ //example 4
+ 
+ function fun1() {
+	console.log('fun1');
+}
+
+function fun2() {
+setTimeout(()=>	console.log('fun2'), 0);
+
+}
+
+setTimeout(()=> fun1(), 0);
+fun2();
+
+console.log('global')
+
+//output
+	//global
+  //fun1
+  //fun2
